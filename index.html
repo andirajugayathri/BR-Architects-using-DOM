@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //nav
+      var head = document.createElement("div")
+      head.style.height="8vh";
+      head.style.backgroundColor="white";
+      head.style.display="flex";
+      head.style.position="sticky";
+      head.style.zIndex="1"
+      head.style.top="0px";
+      head.style.padding="0px 30px 0px 20px"
+      head.style.justifyContent="space-between"
+      document.body.appendChild(head);
+
+       var a=document.createElement("h3");
+       a.innerText="BR" ;
+       a.style.letterSpacing="4px"
+       a.style.fontFamily="calibri" ;
+       a.style.alignItems="center";
+       var aa=document.createElement("anchor");
+       aa.innerText="Architects";
+       aa.style.fontWeight="400"
+       aa.style.letterSpacing="2px"
+       aa.style.paddingLeft="10px";
+       a.appendChild(aa)
+       head.appendChild(a)
+
+      var b=document.createElement("ul");
+       var li1=document.createElement("li");
+        li1.innerText="Projects";
+       var li2=document.createElement("li");
+        li2.innerText="About";
+       var li3=document.createElement("li");
+        li3.innerText="Contact";
+        b.appendChild(li1);
+        b.appendChild(li2);
+        b.appendChild(li3);
+        b.style.listStyle="none";
+        b.style.display="flex";
+        b.style.gap="30px";
+        b.style.letterSpacing="0.3em";
+        b.style.fontSize="1.1em";
+        b.style.fontFamily="calibri"
+        head.appendChild(b)
+
+        var mn=document.createElement("div");
+        mn.style.fontFamily="calibri";
+        mn.style.fontSize="40px";
+        var d=document.createElement("div");
+        d.style.background="url('https://www.w3schools.com/w3images/architect.jpg')"
+        d.style.backgroundSize="cover";
+        d.style.display="flex";
+        d.style.alignItems="center";
+        d.style.justifyContent="center";
+        d.style.height="100vh" ;
+        d.style.width="98vw";
+        var e=document.createElement("span");
+        e.innerText="BR";
+        e.style.fontSize="50px";
+        e.style.padding="4px 15px 4px 15px";
+        e.style.opacity="0.6"
+        e.style.color="white";
+        e.style.backgroundColor="black";
+        var f=document.createElement("anchor");
+        f.innerText="Architects";
+        f.style.paddingLeft="20px";
+        f.style.color="white";
+        d.appendChild(e);
+        d.appendChild(f);
+        mn.appendChild(d);
+        document.body.appendChild(mn);
+        console.log(mn);
+
+        //Projects
+        var heading1=document.createElement("h2");
+        heading1.innerText="Projects";
+        heading1.style.paddingTop="40px";
+        heading1.style.fontFamily="calibri";
+        document.body.appendChild(heading1);
+        console.log(heading1);
+        var element=document.createElement("hr");
+        document.body.appendChild(element);
+        console.log(element);
+  
+
+        let house=["Summer House","Brick House","Renovated","Barn House","Summer House","Brick House","Renovated","Barn House"];
+        let images=["https://www.w3schools.com/w3images/house5.jpg","https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house3.jpg","https://www.w3schools.com/w3images/house4.jpg","https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house5.jpg","https://www.w3schools.com/w3images/house4.jpg","https://www.w3schools.com/w3images/house3.jpg"];
+        var mn2=document.createElement("div");
+        mn2.style.fontFamily="calibri";
+        mn2.style.display="grid";
+        mn2.style.gridTemplateColumns="auto auto auto auto";
+        mn2.style.rowGap="20px";
+        mn2.style.marginTop="40px";
+        mn2.style.justifyContent="space-around";
+        for(i=0;i<8;i++){
+        var el1=document.createElement("div");
+        el1.style.background=`url(${images[i]})`;
+        el1.style.height="35vh";
+        el1.style.width="23vw";
+        el1.style.backgroundSize="cover";
+        el1.style.backgroundRepeat="no-repeat"
+        var el2=document.createElement("div");
+        el2.innerText=house[i];
+        el2.style.width="100px"
+        el2.style.padding="10px";
+        el2.style.background="black";
+        el2.style.color="white";
+        mn2.appendChild(el1);
+        el1.appendChild(el2);
+        document.body.appendChild(mn2);
+        console.log(mn2);
+        }  
+        
+        //About
+        var heading1=document.createElement("h2");
+        heading1.innerText="About";
+        heading1.style.paddingTop="40px";
+        heading1.style.fontFamily="calibri";
+        document.body.appendChild(heading1);
+        console.log(heading1);
+        var element=document.createElement("hr");
+        document.body.appendChild(element);
+        console.log(element);
+        var para1=document.createElement("p");
+        para1.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        para1.style.fontSize="18px" ;
+        para1.style.fontFamily="calibri" ;
+        document.body.appendChild(para1);
+        console.log(para1);
+        
+        
+        let data=[
+        {
+            img:"https://www.w3schools.com/w3images/team2.jpg",name:"John Doe",desig:"CEO & FOUNDER",info:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."
+        },
+        {
+            img:"https://www.w3schools.com/w3images/team1.jpg",name:"Jane Doe",desig:"ARCHITECT",info:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."
+        },
+        {
+            img:"https://www.w3schools.com/w3images/team3.jpg",name:"Mike Ross",desig:"ARCHITECT",info:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."
+        },
+        {
+            img:"https://www.w3schools.com/w3images/team4.jpg",name:"Dan Star",desig:"ARCHITECT",info:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."
+        }
+        ]
+
+        var abt = document.createElement("div")
+        abt.style.display="grid"
+        abt.style.height="80vh"
+        abt.style.width="100%"
+        abt.style.fontFamily="calibri"
+        abt.style.gridTemplateColumns="auto auto auto auto";
+        abt.style.gap="1%"
+        abt.style.gridTemplateRows="100%";
+
+        for(i=0;i<data.length;i++){
+          var b1 = document.createElement("div")
+          b1.style.display="flex"
+          b1.style.flexDirection="column"
+          b1.style.gap="3%"
+          abt.appendChild(b1)
+
+          var ig = document.createElement("img")
+          ig.src=data[i].img;
+          ig.style.width="100%"
+          ig.style.height="45%"
+          b1.appendChild(ig)
+
+          var nm = document.createElement("span")
+          nm.style.fontWeight="600"
+          nm.style.fontSize="1.5em"
+          nm.innerText=data[i].name;
+          b1.appendChild(nm)
+    
+          var dg = document.createElement("span")
+          dg.innerText=data[i].desig;
+          dg.style.color="gray";
+          b1.appendChild(dg)
+
+          var io = document.createElement("span")
+          io.innerText=data[i].info;
+          io.style.fontSize="100%"
+          b1.appendChild(io)
+
+          var btn = document.createElement("button")
+          btn.innerText="Contact";
+          btn.style.padding="8px"
+          btn.style.border="none"
+          btn.style.fontSize="20px"
+          btn.style.width="100%"
+          b1.appendChild(btn)
+ 
+        }
+
+        document.body.appendChild(abt)
+
+        //Contact
+        var contact=document.createElement("h2");
+        contact.innerText="Contact";
+        contact.style.fontFamily="calibri";
+        document.body.appendChild(contact);
+        console.log(contact);
+        var element=document.createElement("hr");
+        document.body.appendChild(element);
+        console.log(element);
+        
+        let inputs=["Name","Email","Subject","Comment"]
+        var form=document.createElement("forms");
+        form.innerText="Lets get in touch and talk about your next project.";
+        form.style.fontFamily="calibri";
+        for(i=0;i<4;i++){
+        var input=document.createElement("input");
+        input.innerText=inputs[i];
+        input.style.width="95vw";
+        input.placeholder=inputs[i];
+        input.style.marginTop="10px";
+        input.style.padding="10px";
+        form.appendChild(input);
+        document.body.appendChild(form);
+        console.log(form);
+        }
+
+        var button=document.createElement("h4");
+        button.innerText="SEND MESSAGE";
+        button.style.fontSize="1em";
+        button.style.color="white";
+        button.style.background="black";
+        button.style.fontFamily="calibri";
+        button.style.width="10vw";
+        button.style.padding="10px 0px 10px 20px";
+        button.style.border="none";
+        button.style.marginTop="15px"; 
+        document.body.appendChild(button);
+        console.log(button);    
+        
+        //ImageMap
+        var ls=document.createElement("div");
+        ls.style.background="url('https://www.w3schools.com/w3images/map.jpg')"
+        ls.style.backgroundSize="cover";
+        ls.style.marginTop="50px"
+        ls.style.height="100vh" ;
+        ls.style.width="98vw";
+        document.body.appendChild(ls);
+        console.log(ls);
+
+        //footer
+        var footer=document.createElement("div");
+        footer.innerText="Powered by w3.css";
+        footer.style.fontFamily="calibri";
+        footer.style.color="white";
+        footer.style.padding="35px";
+        footer.style.background="black";
+        footer.style.display="flex";
+        footer.style.justifyContent="center";
+        footer.style.marginTop="10px";
+        document.body.appendChild(footer);
+        console.log(footer);
+
+    </script>
+</body>
+</html>
